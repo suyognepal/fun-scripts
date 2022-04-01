@@ -8,9 +8,10 @@ from selenium.webdriver.support.select import Select
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver import Chrome
 from selenium.webdriver.firefox.options import Options
+import os
 
 def motivation():
-    browser = webdriver.Firefox(executable_path=r'.\geckodriver.exe')
+    browser = webdriver.Firefox(service_log_path=os.devnull,executable_path=r'.\geckodriver.exe')
     motivationalvids = "https://www.youtube.com/watch?v=Z63w5PefxTQ&ab_channel=AlexKaltsMotivation" 
     browser = webdriver.Firefox()
     #browser.implicitly_wait(100)
